@@ -57,7 +57,19 @@
 }
 .main_html .menu_html .signIn button{
     width: 80%;
+    height: 2.68rem;
+    background-color: #4d4b8b;
+    border-radius: 2rem;
 }
+
+.main_html .menu_html .signIn button:hover{
+    box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8),
+    0px -2.5px 2px rgba(247, 244, 244, 0.8),
+    0px 2.5px 2px rgba(241, 237, 237, 0.8);
+    transition: all .3s ease;
+}
+
+
 
 
 .main_html .menu_html .logo_img{
@@ -99,6 +111,13 @@
     color: #CCB8B8;
 }
 
+.main_html .body_html .find_bar i:hover{
+    box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8),
+    0px -2.5px 2px rgba(247, 244, 244, 0.8),
+    0px 2.5px 2px rgba(241, 237, 237, 0.8);
+    transition: all .3s ease;
+}
+
 .main_html .body_html .find_bar .f_bar_find,
 .main_html .body_html .find_bar .f_bar_user{
     justify-content: flex-start;
@@ -108,10 +127,17 @@
 .main_html .body_html .find_bar .download_box{
     width: 14rem;
     text-align: left;
-    background-color: #ffffff;
     border-radius: 20px;
     opacity: 0.9;
 }
+
+.main_html .body_html .find_bar .download_box:hover{
+    box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8),
+    0px 2.5px 2px rgba(54, 46, 46, 0.8),
+    0px 2.5px 2px rgba(199, 0, 0, 0.8);
+    transition: all .3s ease;
+}
+
 
 .main_html .body_html .find_bar .find_box{
     width: 18rem;
@@ -119,6 +145,14 @@
     background-color: #2F2739;
     border-radius: 20px;
 }
+
+.main_html .body_html .find_bar .find_box:hover{
+    box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8),
+    0px 2.5px 2px rgba(54, 46, 46, 0.8),
+    0px 2.5px 2px rgba(199, 0, 0, 0.8);
+    transition: all .3s ease;
+}
+
 .main_html .body_html .find_bar .find_box input{
     border: none;
     background: none;
