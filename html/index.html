@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/320fb117b2.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+
+    <!-- STYLE SLIDE SHOW --><!-- STYLE SLIDE SHOW --><!-- STYLE SLIDE SHOW --><!-- STYLE SLIDE SHOW -->
+    <!-- STYLE SLIDE SHOW --><!-- STYLE SLIDE SHOW --><!-- STYLE SLIDE SHOW --><!-- STYLE SLIDE SHOW -->
+    <!-- STYLE SLIDE SHOW --><!-- STYLE SLIDE SHOW --><!-- STYLE SLIDE SHOW --><!-- STYLE SLIDE SHOW -->
+
+    <style>   
+        * {box-sizing:border-box}
+
+        /* Slideshow container */
+        .slideshow-container{
+            display: flex;
+            width: 32rem;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides:first-child{
+            display: block;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color:#75BD7D;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 10px;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(254, 251, 251, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }    
+    </style>
+
+
+    <!-- SCRIPT SLIDESHOW --><!-- SCRIPT SLIDESHOW --><!-- SCRIPT SLIDESHOW --><!-- SCRIPT SLIDESHOW -->
+    <!-- SCRIPT SLIDESHOW --><!-- SCRIPT SLIDESHOW --><!-- SCRIPT SLIDESHOW --><!-- SCRIPT SLIDESHOW -->
+    <!-- SCRIPT SLIDESHOW --><!-- SCRIPT SLIDESHOW --><!-- SCRIPT SLIDESHOW --><!-- SCRIPT SLIDESHOW -->
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }        
+    </script>
+</head>
+<body>
+    <div class="main_html">
+        <div class="menu_html">
+            <div class="logo_img">
+                <a href="../html/index.html">
+                    <img src="../img/logo/main_logo.png" alt="">
+                </a>
+            </div>
+
+            <ul class="menu1">
+                <li><a href="#"><i class="fas fa-compact-disc"></i> Khám phá</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i></i> #zingchart</a></li>
+                <li><a href="#"><i class="fas fa-podcast"></i> Radio <span>live</span></a></li>
+                <li><a href="#"><i class="fas fa-headphones-alt"></i> Thư viện</a></li>
+            </ul>
+
+            <br>
+
+            <ul class="menu2">
+                <li><a href="#"><i class="fas fa-music"></i> Nhạc mới</a></li>
+                <li><a href="#"><i class="fas fa-th"></i> Chủ đề</a></li>
+                <li><a href="#"><i class="fas fa-star"></i> Top 100</a></li>                
+            </ul>
+            <br><br>
+            <div class="signIn">
+                <a href="../html/sign_in.html">
+                  <button>Đăng nhập</button>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="body_html">
+            <div class="find_bar">
+                <div class="f_bar_find">
+                    <li><a href=""><i class="fas fa-arrow-left"></i></a></li>
+                    <li><a href=""><i class="fas fa-arrow-right"></i></a></li>
+                    <div class="find_box">
+                        <li><a href=""><i class="fas fa-search"></i></a><input type="text" name="" id="" placeholder="Tìm bài hát của bạn ..."></li>
+                    </div>
+                </div>
+                <div class="f_bar_user">
+                    <div class="download_box">
+                        <li><a href=""><i class="fas fa-download"></i> &nbsp;&nbsp;&nbsp; Tải bản cho windows</a></li>
+                    </div>
+                    <li><a href=""><i class="fas fa-cog"></i></a></li>
+                    <li><a href=""><i class="fas fa-user"></i></a></li>
+                </div>
+            </div>
+            <div class="list_music">
+                <!-- SLIDER SHOWW --><!-- SLIDER SHOWW --><!-- SLIDER SHOWW --><!-- SLIDER SHOWW -->
+                <div class="lst_music_slider">
+                    <div class="lst_banner">
+                        <img src="../img/posternhac/Song_poster.png" alt="">
+                    </div>
+                    <div class="lst_slide_SHOW">
+                        <div class="slideshow-container">
+                            <!-- Full-width images with number and caption text -->
+                            <div class="mySlides fade">
+                              <img src="../img/posternhac/taivisaoimg.jpg" style="width:100%">
+                              <div class="text">TẠI VÌ SAO</div>
+                            </div>                      
+                            <div class="mySlides fade">
+                              <img src="../img/posternhac/watingforu.jpg" style="width:100%">
+                              <div class="text">WATING FOR YOU</div>
+                            </div>                      
+                            <div class="mySlides fade">
+                              <img src="../img/posternhac/vetinhimg.jpg" style="width:100%">
+                              <div class="text">VỆ TINH</div>
+                            </div>                      
+                            <!-- Next and previous buttons -->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>                      
+                          <!-- The dots/circles -->
+                            <div style="text-align:center">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                            </div>
+                    </div>
+                    <div class="lst_banner">
+                        <img src="../img/posternhac/Song_poster.png" alt="">
+                    </div>
+                </div>
+
+                <div class="lst_music_body">
+                    
+                    <div class="top_list">
+                        <h4 class="playsit-name">Các bài nhạc thịnh hành</h4>
+                        <div class="song_trend">
+                            <div class="playlist"></div>
+                        </div>
+                    </div>
+
+                    <div class="playsit_music">
+                        <h4 class="playsit-name">Danh sách nhạc chill</h4>
+                        <div class="playsit_poster_block">
+                          <div class="poster_box">
+                            <a href=""><img src="../img/posternhac/chill/lofi1chutthoi.jfif" alt=""></a>
+                            <p class="ms_describe">Hãy chill thôi</p>
+                          </div>
+                          <div class="poster_box">
+                            <a href=""><img src="../img/posternhac/chill/chillhits.jpg" alt=""></a>
+                            <p class="ms_describe">Hãy chill thôi</p>
+                          </div>
+                          <div class="poster_box">
+                            <a href=""><img src="../img/posternhac/chill/chillhopathome.jpg" alt=""></a>
+                            <p class="ms_describe">Hãy chill thôi</p>
+                          </div>
+                          <div class="poster_box">
+                            <a href=""><img src="../img/posternhac/chill/lofiguitar.jpg" alt=""></a>
+                            <p class="ms_describe">Hãy chill thôi</p> 
+                          </div>
+                          <div class="poster_box">
+                            <a href=""><img src="../img/posternhac/chill/lofipiano.jpg" alt=""></a>
+                            <p class="ms_describe">Hãy chill thôi</p>
+                          </div>
+                        </div>
+                    </div>
+                    
+                    <div class="playsit_music">
+                      <h4 class="playsit-name">Danh sách nhạc thịnh hành</h4>
+                      <div class="playsit_poster_block">
+                        <div class="poster_box">
+                          <a href=""><img src="../img/posternhac/top100/nhachan.jpg" alt=""></a>
+                          <p class="ms_describe">Hãy chill thôi</p>
+                        </div>
+                        <div class="poster_box">
+                          <a href=""><img src="../img/posternhac/top100/nhactre.jpg" alt=""></a>
+                          <p class="ms_describe">Hãy chill thôi</p>
+                        </div>
+                        <div class="poster_box">
+                          <a href=""><img src="../img/posternhac/top100/nhactrtinh.jpg" alt=""></a>
+                          <p class="ms_describe">Hãy chill thôi</p>
+                        </div>
+                        <div class="poster_box">
+                          <a href=""><img src="../img/posternhac/top100/popusuk.jpg" alt=""></a>
+                          <p class="ms_describe">Hãy chill thôi</p> 
+                        </div>
+                        <div class="poster_box">
+                          <a href=""><img src="../img/posternhac/top100/popusuk.jpg" alt=""></a>
+                          <p class="ms_describe">Hãy chill thôi</p>
+                        </div>
+                      </div>
+                  </div>
+
+                    
+
+                  <div class="playsit_music">
+                        <h4 class="playsit-name" style="text-align:center; font-size: 1.68rem;" >Nghe radio trực truyến</h4>
+                        <div class="playsit_poster_block_rad">
+                          <div class="poster_box_rad">
+                            <a href="../html/radio.html"><img src="../img/posternhac/radio/chill_list.jpg" alt=""></a>
+                            <p class="ms_describe">Hãy chill thôi</p>
+                          </div>
+                          <div class="poster_box_rad">
+                            <a href="../html/radio.html"><img src="../img/posternhac/radio/FORNIGHT.jfif" alt=""></a>
+                            <p class="ms_describe">Hãy chill thôi</p>
+                          </div>
+                          <div class="poster_box_rad">
+                            <a href="../html/radio.html"><img src="../img/posternhac/radio/k_pop.jpg" alt=""></a>
+                            <p class="ms_describe">Hãy chill thôi</p>
+                          </div>
+                          <div class="poster_box_rad">
+                            <a href="../html/radio.html"><img src="../img/posternhac/radio/poscast.png" alt=""></a>
+                            <p class="ms_describe">Hãy chill thôi</p> 
+                          </div>
+                          <div class="poster_box_rad">
+                            <a href="../html/radio.html"><img src="../img/posternhac/radio/topVpop.jpg" alt=""></a>
+                            <p class="ms_describe">Hãy chill thôi</p>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="music_player_block"> 
+        <div class="player">
+            <div class="dashboard">
+                
+                <div class="cd">
+                    <div
+                      class="cd-thumb"
+                      style="background-image: url('./img/1.jpg')"
+                    ></div>
+                </div>
+                <header>                
+                    <h2></h2>
+                </header>
+
+              <div class="control">
+                <div class="ctrl_block">
+                    <div class="btn btn-repeat">
+                    <i class="fas fa-redo"></i>
+                    </div>
+                    <div class="btn btn-prev">
+                    <i class="fas fa-step-backward"></i>
+                    </div>
+                    <div class="btn btn-toggle-play">
+                    <i class="fas fa-pause icon-pause"></i>
+                    <i class="fas fa-play icon-play"></i>
+                    </div>
+                    <div class="btn btn-next">
+                    <i class="fas fa-step-forward"></i>
+                    </div>
+                    <div class="btn btn-random">
+                    <i class="fas fa-random"></i>
+                </div>       
+                </div>
+                <input id="progress" class="progress" type="range" value="0" step="1" min="0"  max="100">   
+              </div>
+              
+              <audio id="audio" src=""></audio>
+            </div>             
+        </div>    
+    </div>
+    
+
+    <script>   
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+        const cd = $(".cd");
+        const heading = $("header h2");
+        const cdThumb = $(".cd-thumb");
+        const audio = $("#audio");
+        const playBtn = $(".btn-toggle-play");
+        const player = $(".player");
+        const progress = $("#progress");
+        const nextBtn = $(".btn-next");
+        const prevBtn = $(".btn-prev");
+        const randomBtn = $(".btn-random");
+        const repeatBtn = $(".btn-repeat");
+        const playlist = $(".playlist");
+        const app = {
+          currentIndex: 0,
+          isPlaying: false,
+          isRandom: 0,
+          isRepeat: false,
+          songs: [
+            {
+              name: "Điều tồi tệ của em",
+              singer: "Khói",
+              path: "../music/DieuToiTeCuaEm.mp3",
+              image: "../img/lst_music_trend/Dieutoitecuaem.jpg",
+            },
+            {
+              name: "Bí mật nhỏ",
+              singer: "Bray",
+              path: "../music/BiMatNho.mp3",
+              image: "../img/lst_music_trend/Bimatnho.jpg",
+            },            
+            {
+              name: "Từng là tụi mình",
+              singer: "Khói",
+              path: "../music/TungLaTuiMinh.mp3",
+              image: "../img/lst_music_trend/Tunglatuiminh.jpg",
+            },
+            {
+              name: "Tháng tư là lời nói dối của em",
+              singer: "Hà Tuấn Anh",
+              path: "../music/Thang4LaLoiNoiDoiCuaEm.mp3",
+              image: "../img/lst_music_trend/Thang4laloinoidoicuaem.jpg",
+            },
+            {
+              name: "Thói quen",
+              singer: "Bray",
+              path: "../music/ThoiQuen.mp3",
+              image: "../img/lst_music_trend/Thoiquen.jpg",
+            },
+            
+          ],
+          //Load các nhạc lên Playlist
+          render: function () {
+            const htmls = this.songs.map((song, index) => {
+              return `
+                        <div class="song_block"> 
+                          <div class="song ${
+                            index === this.currentIndex ? "active" : ""
+                          }" data-index="${index}"  style="background-image: url('${
+                                    song.image
+                                  }')">
+                                  <div class="thumb" style="background-image: url('${
+                                    song.image
+                                  }')">
+                                  </div>
+                                                            
+                          </div>
+                          <div class="body">
+                                  <h3 class="title">${song.name}</h3>
+                                  <p class="author">${song.singer}</p>
+                          </div>
+                        </div>  
+                          `;
+            });
+            playlist.innerHTML = htmls.join("");
+          },
+          defineProperties: function () {
+            Object.defineProperty(this, "currentSong", {
+              get: function () {
+                return this.songs[this.currentIndex];
+              },
+            });
+          },
+  
+          handleEvents: function () {
+            const _this = this;
+            const cdWidth = cd.offsetWidth;
+  
+            //Xử lí CD quay / dừng
+            const cdThumbAnimate = cdThumb.animate(
+              [{ transform: "rotate(360deg)" }],
+              {
+                duration: 10000,
+                iterations: Infinity,
+              }
+            );
+            cdThumbAnimate.pause();
+            
+            //Xử lí nút click để nghe nhạc
+            playBtn.onclick = function () {
+              if (app.isPlaying) {
+                app.isPlaying = false;
+                audio.pause();
+                player.classList.remove("playing");
+              } else {
+                audio.play();
+              }
+            };
+            //Khi song được play
+            audio.onplay = function () {
+              app.isPlaying = true;
+              player.classList.add("playing");
+              cdThumbAnimate.play();
+            };
+            //Khi song bị pause
+            audio.onpause = function () {
+              app.isPlaying = false;
+              player.classList.remove("playing");
+              cdThumbAnimate.pause();
+            };
+            //Khi tiến độ bài hát thay đổi
+            audio.ontimeupdate = function () {
+              if (audio.duration) {
+                const progressPercent = Math.floor(
+                  (audio.currentTime / audio.duration) * 100
+                );
+                progress.value = progressPercent;
+              }
+            };
+            //Tua thanh nghe(Thời gian toàn bài hát chia ra lấy phần trăm rồi nhân với phần trăm của thanh tua)
+            progress.onchange = function (e) {
+              const seekTime = (audio.duration / 100) * e.target.value;
+              audio.currentTime = seekTime;
+            };
+            //Khi next sang bài hát tiếp theo
+            nextBtn.onclick = function () {
+              if (app.isRandom) {
+                app.playRandomSong();
+              } else {
+                app.nextSong();
+              }
+              audio.play();
+              app.render();
+              app.scrollToActiveSong();
+            };
+            //Khi trả về bài hát phía sau
+            prevBtn.onclick = function () {
+              if (app.isRandom) {
+                app.playRandomSong();
+              } else {
+                app.preSong();
+              }
+              audio.play();
+              app.render();
+              app.scrollToActiveSong();
+            };
+            //Tắt mở random bài hát
+            randomBtn.onclick = function (e) {
+              app.isRandom = !app.isRandom;
+              randomBtn.classList.toggle("active", app.isRandom);
+            };
+            //Xử lí khi hết bài hát sẽ phát bài mới
+            audio.onended = function () {
+              if (app.isRepeat) {
+                audio.play();
+              } else {
+                nextBtn.click();
+              }
+            };
+            //Xử lí nghe lại 1 bài hát
+            repeatBtn.onclick = function () {
+              app.isRepeat = !app.isRepeat;
+              repeatBtn.classList.toggle("active", app.isRepeat);
+            };
+            //Click vào playlist
+            playlist.onclick = function (e) {
+              const songNode = e.target.closest(".song:not(.active)");
+              if (songNode || e.target.closest(".option")) {
+                //Xử lí click vào bài hát
+                if (songNode) {
+                  app.currentIndex = Number(songNode.dataset.index);
+                  app.loadCurrentSong();
+                  app.render();
+                  audio.play();
+                }
+  
+                //Xử lí khi click vào option bài hát
+                if (e.target.closest(".option")) {
+                }
+              }
+            };
+          },
+          //load hình và tên lên dĩa CD phát
+          loadCurrentSong: function () {
+            heading.textContent = this.currentSong.name;
+            cdThumb.style.backgroundImage = `url(${this.currentSong.image})`;
+            audio.src = this.currentSong.path;
+          },
+          //Xử lí bài hát tiếp theo nút next
+          nextSong: function () {
+            this.currentIndex++;
+            if (this.currentIndex >= this.songs.length) {
+              this.currentIndex = 0;
+            }
+            this.loadCurrentSong();
+          },
+          preSong: function () {
+            this.currentIndex--;
+            if (this.currentIndex < 0) {
+              this.currentIndex = this.songs.length - 1;
+            }
+            this.loadCurrentSong();
+          },
+          playRandomSong: function () {
+            let newIndex;
+            do {
+              newIndex = Math.floor(Math.random() * this.songs.length);
+            } while (newIndex === this.currentIndex);
+            this.currentIndex = newIndex;
+            this.loadCurrentSong();
+          },
+          scrollToActiveSong: function () {
+            setTimeout(() => {
+              $(".song.active").scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+              });
+            }, 500);
+          },
+  
+          start: function () {
+            //Định nghĩa các thuộc tính của object
+            this.defineProperties();
+  
+            //Cuộn con trỏ để img chính được thu phóng theo kích thước con trỏ
+            this.handleEvents();
+            //Tải thông tin bài hát đầu tiên lên UI khi chạy ứng dụng
+            this.loadCurrentSong();
+            //render playlist
+            this.render();
+          },
+        };         
+        app.start();        
+      </script>
+</body>
+</html>

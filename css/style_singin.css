@@ -1,0 +1,231 @@
+/* RESET CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+
+
+.main_html{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;  
+}
+
+
+/* MENU GÓC TRÁI */
+/* MENU GÓC TRÁI */
+/* MENU GÓC TRÁI */
+
+.main_html .menu_html{
+    background-color: #231B2E;
+    width: 12.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.main_html .menu_html a{
+    text-decoration: none;
+    color: #CCB8B8;
+}
+.main_html .menu_html li{
+    list-style-type: none;
+    width: 100%;
+    padding: .5rem 0;
+    padding-left: 1rem;
+}
+
+.main_html .menu_html li:hover{
+    background-color: #868080;
+    opacity: .5;
+}
+.main_html .menu_html li:hover a{
+    color: #fff;
+}
+
+
+/* CÁI NÚT NÈ */
+/* CÁI NÚT NÈ */
+/* CÁI NÚT NÈ */
+
+.main_html .menu_html .signIn{
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;   
+}
+.main_html .menu_html .signIn button{
+    width: 80%;
+}
+
+
+.main_html .menu_html .logo_img{
+    text-align: center;
+}
+
+.main_html .menu_html img{
+    width: 5rem;
+    padding: .5rem;
+}
+
+.main_html .menu_html img:hover{
+    opacity: .8;
+    padding: 0;
+    border-radius: 10px;
+}
+
+/* MENU GÓC PHẢIIIIIIIIII */
+/* MENU GÓC PHẢIIIIIIIIII */
+/* MENU GÓC PHẢIIIIIIIIII */
+
+.main_html .body_html{
+    background-color: #170F23;
+    width: 100%;
+}
+.main_html .body_html li{
+    list-style-type: none;
+    padding: .4rem 1rem;
+}
+
+.main_html .body_html .find_bar{
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem .5rem;
+}
+.main_html .body_html .find_bar a{
+    text-decoration: none;
+    color: #CCB8B8;
+}
+
+.main_html .body_html .find_bar .f_bar_find,
+.main_html .body_html .find_bar .f_bar_user{
+    justify-content: flex-start;
+    display: flex;    
+}
+
+.main_html .body_html .find_bar .download_box{
+    width: 14rem;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+.main_html .body_html .find_bar .find_box{
+    width: 18rem;
+    display: flex;
+    background-color: #2F2739;
+    border-radius: 20px;
+}
+.main_html .body_html .find_bar .find_box input{
+    border: none;
+    background: none;
+    color: #ffffff;
+    margin: 0.2rem;
+    width: 14rem;
+    margin-left: .8em;
+}
+
+.main_html .body_html  h4{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem;
+    color: #fff;
+}
+
+
+.main_html .body_html  .signIn{
+    text-align: center;
+}
+
+.main_html .body_html  button {
+    height: 8rem;
+    font-size: 1.68rem;
+    width: 26.8rem;
+    margin-top: 3rem;
+}
+
+
+.playsit-name {
+    text-align: center;
+    color: #ffffff;
+}
+
+.playsit_poster_block_rad{
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+}
+
+
+.playsit_music .playsit_poster_block_rad img{
+    width: 9.68rem;
+    height: 9.68rem;
+    border-radius: 50%;
+    border: 1px solid #8f8f8f;
+    margin-bottom: .68rem;
+}
+
+.ms_describe{
+    text-align: center;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+/* #################### */
+
+.music_player_block .player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.music_player_block .dashboard {
+    border-top: 1px solid #ccc;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #170F23; 
+    align-items: center;
+}
+
+
+.music_player_block .dashboard .pos_now_playing img{
+    width: 4.68rem;
+    height: 4.68rem;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.music_player_block .dashboard .pos_now_playing img {
+    animation: rotateAnimation 2s linear infinite;
+}
+
+.music_player_block .dashboard .now_playing img{
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    width: 10   .68rem;
+    height: 6.68rem;
+}

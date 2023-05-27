@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style_singin.css">
+    <script src="https://kit.fontawesome.com/320fb117b2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="main_html">
+        <div class="menu_html">
+            <div class="logo_img">
+                <a href="../html/index.html">
+                    <img src="../img/logo/main_logo.png" alt="">
+                </a>
+            </div>
+
+            <ul class="menu1">
+                <li><a href="#"><i class="fas fa-compact-disc"></i> Khám phá</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i></i> #zingchart</a></li>
+                <li><a href="#"><i class="fas fa-podcast"></i> Radio <span>live</span></a></li>
+                <li><a href="#"><i class="fas fa-headphones-alt"></i> Thư viện</a></li>
+            </ul>
+
+            <br>
+
+            <ul class="menu2">
+                <li><a href="#"><i class="fas fa-music"></i> Nhạc mới</a></li>
+                <li><a href="#"><i class="fas fa-th"></i> Chủ đề</a></li>
+                <li><a href="#"><i class="fas fa-star"></i> Top 100</a></li>                
+            </ul>
+            <br><br>            
+        </div>
+
+
+        <div class="body_html">
+            <div class="find_bar">
+                <div class="f_bar_find">
+                    <li><a href=""><i class="fas fa-arrow-left"></i></a></li>
+                    <li><a href=""><i class="fas fa-arrow-right"></i></a></li>
+                    <div class="find_box">
+                        <li><a href=""><i class="fas fa-search"></i></a><input type="text" name="" id="" placeholder="Tìm bài hát của bạn ..."></li>
+                    </div>
+                </div>
+
+                <div class="f_bar_user">
+                    <div class="download_box">
+                        <li><a href=""><i class="fas fa-download"></i> &nbsp;&nbsp;&nbsp; Tải bản cho windows</a></li>
+                    </div>
+                    <li><a href=""><i class="fas fa-cog"></i></a></li>
+                    <li><a href=""><i class="fas fa-user"></i></a></li>
+                </div>
+            </div>
+
+            
+
+            
+
+            <div class="playsit_music">
+                <h4 class="playsit-name" style="text-align:center; font-size: 1.68rem;" >Nghe radio trực truyến</h4>
+                <div class="playsit_poster_block_rad">
+                  <div class="poster_box_rad">
+                    <a class="play_icon" href="#">
+                        <img src="../img/posternhac/radio/chill_list.jpg" alt="">
+                    </a>
+                    <p class="ms_describe">Hãy chill thôi</p>
+                  </div>
+                  <div class="poster_box_rad">
+                    <a href="#" class="play_icon"><img class="post_rad" src="../img/posternhac/radio/FORNIGHT.jfif" alt=""></a>
+                    <p class="ms_describe">Hãy chill thôi</p>
+                  </div>
+                  <div class="poster_box_rad">
+                    <a href="#" class="play_icon"><img class="post_rad" src="../img/posternhac/radio/k_pop.jpg" alt=""></a>
+                    <p class="ms_describe">Hãy chill thôi</p>
+                  </div>
+                  <div class="poster_box_rad">
+                    <a href="#" class="play_icon"><img class="post_rad" src="../img/posternhac/radio/poscast.png" alt=""></a>
+                    <p class="ms_describe">Hãy chill thôi</p> 
+                  </div>
+                  <div class="poster_box_rad">
+                    <a href="#" class="play_icon"><img class="post_rad" src="../img/posternhac/radio/topVpop.jpg" alt=""></a>
+                    <p class="ms_describe">Hãy chill thôi</p>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="music_player_block"> 
+        <div class="player">
+            <div class="dashboard">    
+                <div class="pos_now_playing">
+                    <img src="../img/posternhac/radio/now_play/Now playing.png" alt="">
+                </div>           
+                <div class="now_playing">
+                    <img src="../img/posternhac/radio/now_play/now_chill.jfif" alt="">
+                </div>
+                <div class="pos_now_playing">
+                    <img src="../img/posternhac/radio/now_play/Now playing.png" alt="">
+                </div>           
+
+            </div>             
+        </div>    
+    </div>
+
+
+    <script>
+        var playIconElements = document.querySelectorAll(".play_icon");
+    
+        playIconElements.forEach(function(playIcon) {
+            playIcon.addEventListener("click", function() {
+                var iframe = document.createElement("iframe");
+                iframe.src = "https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1";
+                iframe.title = "YouTube video player";
+                iframe.frameborder = "0";
+                iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    
+                // Add CSS styles to hide the iframe initially
+                iframe.style.display = "none";
+                document.body.appendChild(iframe);
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
+
+

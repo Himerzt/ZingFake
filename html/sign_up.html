@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style_singin.css">
+    <script src="https://kit.fontawesome.com/320fb117b2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="main_html">
+        <div class="menu_html">
+            <div class="logo_img">
+                <a href="../html/index.html">
+                    <img src="../img/logo/main_logo.png" alt="">
+                </a>
+            </div>
+
+            <ul class="menu1">
+                <li><a href="#"><i class="fas fa-compact-disc"></i> Khám phá</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i></i> #zingchart</a></li>
+                <li><a href="#"><i class="fas fa-podcast"></i> Radio <span>live</span></a></li>
+                <li><a href="#"><i class="fas fa-headphones-alt"></i> Thư viện</a></li>
+            </ul>
+
+            <br>
+
+            <ul class="menu2">
+                <li><a href="#"><i class="fas fa-music"></i> Nhạc mới</a></li>
+                <li><a href="#"><i class="fas fa-th"></i> Chủ đề</a></li>
+                <li><a href="#"><i class="fas fa-star"></i> Top 100</a></li>                
+            </ul>
+            <br><br>            
+        </div>
+
+
+        <div class="body_html">
+            <div class="find_bar">
+                <div class="f_bar_find">
+                    <li><a href=""><i class="fas fa-arrow-left"></i></a></li>
+                    <li><a href=""><i class="fas fa-arrow-right"></i></a></li>
+                    <div class="find_box">
+                        <li><a href=""><i class="fas fa-search"></i></a><input type="text" name="" id="" placeholder="Tìm bài hát của bạn ..."></li>
+                    </div>
+                </div>
+
+                <div class="f_bar_user">
+                    <div class="download_box">
+                        <li><a href=""><i class="fas fa-download"></i> &nbsp;&nbsp;&nbsp; Tải bản cho windows</a></li>
+                    </div>
+                    <li><a href=""><i class="fas fa-cog"></i></a></li>
+                    <li><a href=""><i class="fas fa-user"></i></a></li>
+                </div>
+            </div>
+
+            <div class="signin">
+                <h4>Hãy đăng nhập tài khoản của bạn</h4>
+                <div class="signIn">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Đăng Ký</button>
+                </div>  
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade"  id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="title">Tạo tài khoản nghe nhạc của bạn</h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="txtTaiKhoan">Tài khoản :</label>
+                        <input type="text" class="form-control" placeholder="Chứa các ký tự A-Z a-z 0-9" id="txtTaiKhoan">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtMatkhau">Mật khẩu :</label>
+                        <input type="text" class="form-control" placeholder="Chứa các ký tự A-Z a-z 0-9" id="txtMatkhau">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="txtreMatkhau">Nhập lại mật khẩu :</label>
+                        <input type="text" class="form-control" placeholder="Chứa các ký tự A-Z a-z 0-9" id="txtreMatkhau">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="txtEmail">Email :</label>
+                        <input type="text" class="form-control" placeholder="Chứa các ký tự A-Z a-z 0-9" id="txtEmail">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Đăng ký</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
