@@ -111,9 +111,19 @@
 
     <script>
         var playIconElements = document.querySelectorAll(".play_icon");
+        var currentPlayingIframe = null;
     
         playIconElements.forEach(function(playIcon) {
             playIcon.addEventListener("click", function() {
+                // Check if there is a currently playing iframe
+                if (currentPlayingIframe !== null) {
+                    // Stop the playback of the currently playing iframe
+                    currentPlayingIframe.src = "";
+                    currentPlayingIframe.parentNode.removeChild(currentPlayingIframe);
+                    currentPlayingIframe = null;
+                }
+    
+                // Create and play the new iframe
                 var iframe = document.createElement("iframe");
                 iframe.src = "https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1";
                 iframe.title = "YouTube video player";
@@ -123,9 +133,11 @@
                 // Add CSS styles to hide the iframe initially
                 iframe.style.display = "none";
                 document.body.appendChild(iframe);
+                currentPlayingIframe = iframe;
             });
         });
     </script>
+    
     
     
 </body>
