@@ -77,21 +77,64 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="txtTaiKhoan">Tài khoản :</label>
-                        <input type="text" class="form-control" placeholder="Chứa các ký tự A-Z a-z 0-9" id="txtTaiKhoan">
+                        <input type="text" class="form-control" placeholder="Địa chỉ email của bạn" id="txtTaiKhoan">
+                        <span id="tbTaiKhoan"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="txtMatkhau">Mật khẩu :</label>
                         <input type="text" class="form-control" placeholder="Chứa các ký tự A-Z a-z 0-9" id="txtMatkhau">
+                        <span id="tbMatkhau"></span>
                     </div>                    
                 </div>
 
                 <div class="modal-footer">
                     <a href="../html/sign_up.html" class="nav-link">Đăng ký</a>
-                    <button type="button" class="btn btn-danger">Close</button>
+                    <button type="button" class="btn btn-primary" id="Signin_btn">Đăng nhập</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+    <script>
+        function DANGNHAP(){
+                var rgc = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; /biểu thức chính quy/ 
+                if(  rgc.test($("#txtTaiKhoan").val()) == true ) {
+                    $("#tbTaiKhoan").html("Email hợp lệ");  
+                    return true;
+                } else {
+                    $("#tbTaiKhoan").html("Email không hợp lệ");                      
+                    return false;
+                }
+        }               
+        $("#txtTaiKhoan").blur(DANGNHAP);
+
+        function MATKHAU(){
+                var rgc = /^[A-Za-z0-9]{6,20} $/ ;
+                if(  rgc.test($("#txtMatkhau").val()) == true ) {
+                    $("#tbMatkhau").html("Mật khẩu hợp lệ");  
+                    return true;
+                } else {
+                    $("#tbMatkhau").html("Mật khẩu không hợp lệ");                      
+                    return false;
+                }
+        }               
+        $("#txtMatkhau").blur(MATKHAU);
+ 
+
+        $("#Signin_btn").click(function() {
+            if (DANGNHAP() && MATKHAU()) {
+                window.location.href = "../index.html"; // Chuyển hướng đến index.html
+            } else {
+                alert("Thông tin đăng nhập chưa chính xác");
+            }
+        });
+
+
+
+    </script>
 </body>
 </html>
